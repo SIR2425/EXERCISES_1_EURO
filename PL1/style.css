@@ -1,8 +1,20 @@
+@font-face {
+    font-family: betFont;
+    src: url(MaisondeartisanfreeItalic-VGrmz.otf);
+}
+
+body {
+    text-align:center ;
+}
+
 #divBet {
+    display:inline-block;
     background-color: cornflowerblue;
     margin:50px;
     padding:20px;
     border-radius: 25px;
+    text-align: center;
+    width: 50%;
 }
 
 ol.numbers li {
@@ -23,4 +35,11 @@ ol.numbers li {
     width : 400px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: betFont;
+    font-weight: 900;
 }
