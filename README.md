@@ -1,10 +1,10 @@
-###### EXERCISES_1_EURO
+###### EXERCISES_1_EURO (updated 2024.10.03)
 
 ###### sir2425 pedro moreira
 
 ---
 
-# Euromillions
+# Euromillions v.1
 
 ## Goal:
 
@@ -50,3 +50,27 @@ Regenerate when user clicks the button again.
 - index.html : html structure and content
 - style.css : styling
 - bet.js : functionality
+
+# Euromillions v.1.1
+
+## Goal:
+
+Generate / Consume JSON structure
+
+Using the Previous Code
+
+Modify the javascript to: 1. given a JSON representation display the bet. 2. generate a JSON representation with javascript
+
+# Euromillions v.2
+
+App (small API) to generate a JSON representation
+
+## Goal:
+
+Develop an API in node.js / express.js to generate Keys
+Modify the project to request keys from the server.
+
+## Instructions
+
+- install node.js
+- install express.js
