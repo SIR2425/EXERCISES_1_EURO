@@ -9,10 +9,15 @@
 }
 
 html {
-    background-color: azure;
-    font-family: "BFont";
+    background-color: aliceblue;
+    font-family: "anotherFont";
     font-weight: 400;
     font-style: normal;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
 }
 
 #divBet {
@@ -27,26 +32,34 @@ html {
 }
 
 div#divBet {
-    width : 50%;
+    width: 50%;
     text-align: center;
 }
 
 ol.numbers li {
     font-family: anotherFont;
     display: inline-block;
-    background-color: yellow;
     width: 100px;
-    height :75px;
+    height: 75px;
     font-size: 50px;
     text-align: center;
     border-radius: 20px;
-    margin:10px;
-    padding:10px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#olMain li {
+    background-color: greenyellow;
+}
+
+#olStars li {
+    background-color: yellow;
+    ;
 }
 
 #genBtn {
-    width : 200px;
-    height : 75px;
+    width: 200px;
+    height: 75px;
     font-size: 20px;
-    margin : 20px;
+    margin: 20px;
 }
