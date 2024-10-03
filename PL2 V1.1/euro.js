@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
     });
 
 
-
-
 function gerachave(e) { 
     console.log("vou gerar a chave", e);
     listanumeros = document.getElementById("olMain");
