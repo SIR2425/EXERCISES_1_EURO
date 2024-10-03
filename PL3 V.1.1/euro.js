@@ -4,7 +4,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     button.addEventListener('click', (e) => {
         genNewBet();
+        // genJSONBet();
     });
+
+
 
     /*
     button.addEventListener('click', function (e) {
@@ -25,17 +28,43 @@ function genRandomNumbers(n, min, max) {
     return [...setOfNumbers].sort((a,b) => a-b);
 }
 
+function genJSONBet() {
+
+    let numbers = genRandomNumbers(5, 1, 50);
+    let stars = genRandomNumbers(2, 1, 12);
+
+    let newBet = {
+        timeStamp: new Date(),
+        numbers: numbers,
+        stars: stars,
+    }
+
+    console.log(newBet);
+
+    JSONBet = JSON.stringify(newBet);
+
+    console.log(JSONBet);
+
+    return JSONBet;
+
+}
+
 function genNewBet() {
 
-    numbers = genRandomNumbers(5, 1, 50);
-    stars = genRandomNumbers(2, 1, 12);
+    //numbers = genRandomNumbers(5, 1, 50);
+    //stars = genRandomNumbers(2, 1, 12);
 
-    console.log(numbers, stars);
+    //console.log(numbers, stars);
+
+    let JSONbet = genJSONBet();
+    let bet = JSON.parse(JSONbet);
+
+    console.log(bet);
    
     theOLNumbers = document.getElementById('olMain');
     theOLNumbers.innerHTML = "";
 
-    numbers.forEach(number => {
+    bet.numbers.forEach(number => {
         newLi = document.createElement("li");
         newLi.innerHTML = number;
         theOLNumbers.appendChild(newLi);
@@ -44,7 +73,7 @@ function genNewBet() {
     theOLStars = document.getElementById('olStars');
     theOLStars.innerHTML = "";
 
-    stars.forEach(star => {
+    bet.stars.forEach(star => {
         newLi = document.createElement("li");
         newLi.innerHTML = star;
         theOLStars.appendChild(newLi);
