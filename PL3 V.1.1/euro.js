@@ -70,6 +70,8 @@ function genNewBet() {
         theOLNumbers.appendChild(newLi);
     });
 
+    
+
     theOLStars = document.getElementById('olStars');
     theOLStars.innerHTML = "";
 
