@@ -2,6 +2,9 @@ express = require('express');
 
 app = new express();
 
+
+app.use(express.static('public'));
+
 app.get('/hello', function (req, res) {
     return res.send('Hello');
 });
