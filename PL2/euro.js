@@ -24,6 +24,7 @@ function gerachave(e) {
     console.log(gerador(5, 1, 50));
     console.log("vou gerar a chave", e);
     
+    debugger;
     listanumeros = document.getElementById("olMain");
     listanumeros.innerHTML = "";
     an.forEach((numero) => {

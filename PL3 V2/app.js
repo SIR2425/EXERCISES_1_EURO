@@ -28,9 +28,10 @@ function generate(n, min, max) {
 function bet() {
     numbers = generate(5, 1, 50);
     stars = generate(2, 1, 12);
+    function getNewBet() {
     newbet = {
         "numbers": numbers,
-        "starts" : stars
+        "stars" : stars
     }
     return newbet;
 }

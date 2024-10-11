@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     function getNewBet() {
         fetch('http://localhost:3000/euro')
-            .then((response) => {
-                bet = response.body.json();
+            .then((response) => response.json())
+            .then (bet => {
                 //debugger;
-                console.log(JSON.parse(bet));
+                console.log(bet.numbers);
 
 
     theOLNumbers = document.getElementById('olMain');
