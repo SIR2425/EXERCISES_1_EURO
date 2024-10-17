@@ -2,13 +2,39 @@ express = require('express');
 
 app = new express();
 
-app.get('/', function(req, res) {
+app.use(express.static('public'));
+
+app.get('/ola', function(req, res) {
     console.log("a responder em /");
     res.send('Hello Express!');
 });
 
 app.get('/euro', function (req, res) {
     res.set("content-type", 'application/json');
-    res.send('{"numeros":[1,2,3,4,5,6], "estrelas":[1,2]}');
+    chave = gerachave();
+    res.json(chave);
 });
+
+function gerachave() {
+    let chave = {
+        numeros: [],
+        estrelas : [] 
+    }
+
+    numerosSet = new Set();
+    while(numerosSet.size < 5) {
+        let novo = (Math.floor(Math.random() * 50) + 1);
+        numerosSet.add(novo);
+    }
+
+    estrelasSet = new Set();
+    while(estrelasSet.size < 2) {
+        let novo = (Math.floor(Math.random() * 12) + 1);
+        estrelasSet.add(novo);
+    }
+
+    chave.numeros = [...numerosSet];
+    chave.estrelas = [...estrelasSet];
+    return chave;
+}
 app.listen(3000);
